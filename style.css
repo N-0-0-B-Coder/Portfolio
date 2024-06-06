@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Press+Start+2P&display=swap");
+#top {
+   width: 100%;
+   height: 80vh;
+}
+
+.name {
+   height: 100%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-family: "Press Start 2P", system-ui;
+   font-weight: 400;
+   font-style: normal;
+   font-size: 2rem;
+   color: white;
+}
+
+.name > * {
+   margin: 0;
+   padding: 10px 0;
+}
+
+.name span {
+   text-decoration: underline;
+}
+
+.introduction {
+   font-family: "Indie Flower", cursive;
+   font-weight: 400;
+   font-style: normal;
+   height: 80vh;
+}
+
+.introduction h1 {
+   font-size: 70px;
+}
+.introduction p {
+   font-size: 20px;
+   text-align: center;
+   font-weight: 500;
+}
+
+.menu {
+   display: grid;
+   width: 60%;
+   height: 60vh;
+   margin: 30px auto 0 auto;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   justify-items: center; /* Horizontally center the items */
+   align-items: center; /* Vertically center the items */
+}
+
+.card {
+   width: 80%;
+   height: 80%;
+   background-color: hsla(200, 40%, 30%, 0.4);
+   border-radius: 1rem;
+}
+.card:hover {
+   opacity: 0.8;
+}
+.card > a {
+   width: 100%;
+   height: 100%;
+   display: block;
+}
+
+.about-me {
+   background: url("./Assets/menu/About-me.png");
+   background-size: cover;
+   background-position: center;
+}
+.about-me:hover {
+   background: url("./Assets/menu/About-me-hover.gif");
+   background-size: cover;
+   background-position: center;
+}
+
+.cv {
+   background: url("./Assets/menu/CV.png");
+   background-size: cover;
+   background-position: center;
+}
+.cv:hover {
+   background: url("./Assets/menu/CV-hover.gif");
+   background-size: cover;
+   background-position: center;
+}
+
+.connect-me {
+   background: url("./Assets/menu/Connect-me.png");
+   background-size: cover;
+   background-position: center;
+}
+.connect-me:hover {
+   background: url("./Assets/menu/Connect-me-hover.gif");
+   background-size: cover;
+   background-position: center;
+}
+
+.info {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   width: 100%;
+}
+
+.profile > * {
+   margin: 0;
+   padding: 10px 0;
+}
+
+.avatar {
+   padding: 50px 0;
+   height: 200px;
+   border-radius: 50%;
+   border: 2px solid white;
+   background-size: cover;
+   background-position: center;
+}
+
+hr {
+   border: dotted #8ad4f7 6px;
+   border-bottom: none;
+   width: 10%;
+   margin: 100px auto;
+}
+
+.animation {
+   height: 100%;
+   /* max-height: 600px; */
+   width: 100%;
+   background-color: hsla(200, 40%, 30%, 0.4);
+   background-image: url("./Assets/heading/pixel-cloud-set.png"),
+      url("./Assets/heading/pixel-ground.png"), url("./Assets/heading/pixel-castle.png");
+   background-repeat: repeat-x;
+   background-position: 0 20%, 0 100%, 0 100%;
+   background-size: 1000px, 1600px, 1147px;
+   animation: 200s slideToLeft infinite linear;
+}
+
+/* @keyframes para {
+   100% {
+      background-position: -5000px 20%, -800px 95%, 500px 50%, 1000px 100%, 400px 0;
+   }
+} */
+@keyframes slideToLeft {
+   from {
+      background-position: 0 0;
+   }
+   to {
+      background-position: -1000px 0;
+   }
+}
+.gradient-background {
+   background: linear-gradient(300deg, #015d85, #33addf, #8ad4f7);
+   background-size: 500% 500%;
+   animation: gradient-animation 20s ease infinite;
+}
+
+@keyframes gradient-animation {
+   0% {
+      background-position: 0% 50%;
+   }
+   50% {
+      background-position: 100% 50%;
+   }
+   100% {
+      background-position: 0% 50%;
+   }
+}
+
+@media (max-width: 1225px) {
+   .name {
+      font-size: 1.5rem;
+   }
+}
+@media (max-width: 925px) {
+   .name {
+      font-size: 1rem;
+   }
+}
+@media (max-width: 620px) {
+   .name {
+      font-size: 0.75rem;
+   }
+}
+@media (max-width: 470px) {
+   .name {
+      font-size: 0.6rem;
+   }
+}
+@media (max-width: 380px) {
+   .name {
+      font-size: 0.5rem;
+   }
+}
